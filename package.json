@@ -8,16 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@material-ui/core": "next",
+    "@material-ui/core": "latest",
     "clsx": "latest",
-    "cssnano": "^4.1.10",
-    "next": "10.0.3",
+    "next": "latest",
     "prop-types": "latest",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react": "latest",
+    "react-dom": "latest"
   }
 }

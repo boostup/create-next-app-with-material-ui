@@ -2,14 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
-import { CacheProvider } from "@emotion/react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import createCache from "@emotion/cache";
 import theme from "../src/theme";
-
-export const cache = createCache({ key: "css" });
-
-import "../styles/globals.css";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -23,17 +17,20 @@ export default function MyApp(props) {
   }, []);
 
   return (
-    <CacheProvider value={cache}>
+    <React.Fragment>
       <Head>
         <title>My page</title>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
-    </CacheProvider>
+    </React.Fragment>
   );
 }
 
